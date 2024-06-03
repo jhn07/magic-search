@@ -3,7 +3,7 @@
 import { Loader2, SearchIcon } from "lucide-react"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
-import { useRef, useState, useTransition } from "react"
+import { Suspense, useRef, useState, useTransition } from "react"
 import { useRouter, useSearchParams } from "next/navigation";
 
 export const Searchbar = () => {
@@ -50,5 +50,13 @@ export const Searchbar = () => {
         </Button>
       </div>
     </div>
+  )
+}
+
+export default function Page() {
+  return (
+    <Suspense>
+      <Searchbar />
+    </Suspense>
   )
 }

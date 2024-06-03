@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Icons } from "@/components/Icons";
-import { Searchbar } from "@/components/Searchbar";
+import Page from "@/components/Searchbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -51,7 +51,7 @@ export default function RootLayout({
                 A beautifully designed, hybrid search engine that emhances search accuracy by querying semantically related results.
               </p>
               <div className="max-w-2xl mx-auto w-full flex flex-col mt-16">
-                <Searchbar />
+                <Page />
                 {children}
               </div>
             </div>
